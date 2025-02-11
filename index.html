@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 psd </title>
+    <meta name="description" content="2nd psd project">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+*,::before,::after{ 
+            margin: 0; 
+            box-sizing: border-box;
+        }
+        a{
+             text-decoration: none;
+        }
+        img{
+             vertical-align: bottom;
+            }
+        label{
+             display: block;
+            }
+        button{
+             padding: 0; 
+             cursor: pointer;
+            }
+        :disabled{
+             cursor: not-allowed;
+            }
+        ul{
+             list-style: none; 
+             padding: 0;
+            }
+        html{
+             font-size: 15px; 
+             scroll-behavior: smooth; 
+             scroll-padding-top: 80px; 
+             --fclr: #2f446b;
+             --oclr: #fa8a43;
+             --gclr: #9fb543;
+            }
+        body{
+            font-size: 16px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+        .container{
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 0;
+        }
+
+        header{
+            position: fixed;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .wrap-1{
+            background-image: url(2_img-3.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+        }
+
+        .heading{
+            display: flex;
+            padding: 4rem 1rem 1rem 3rem;
+            
+            
+        }
+
+        .logo{
+            flex: 1 1 50%;
+            margin: 1.5rem;
+        }
+        .logo img{
+            width: 12rem;
+            padding: 1rem 0.5rem 1rem 1.5rem;
+        }
+        .menu{
+            flex: 1 1 50%;
+            padding: 1rem;
+            margin: 4rem;
+        }
+        .menu ul{
+            display: flex;
+        }
+        .menu a{
+            padding: 1rem;
+            color: var(--fclr);
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        .chk{ 
+            display: none;  
+            width: 4rem; 
+            height: 2.8rem;  
+            color: var(--fclr);
+            background: none; 
+            border-radius: 10px; 
+            float: right;  
+            padding: 5px 10px; 
+        }
+        .chk span{ 
+            display: block; 
+            height: 2px; 
+            background: var(--fclr); 
+            margin: 4px 0; 
+        } 
+        header .chk:checked + .collapse{ display: block; }
+        
+        .chk.active span:nth-child(1){
+            transform: translateY(6px) rotate(-14deg);
+        }
+        .chk.active span:nth-child(2){
+            opacity: 0;
+        }
+        .chk.active span:nth-child(3){
+            transform: translateY(-6px) rotate(14deg);
+        }
+
+        .title{
+            margin: 0rem 1rem 0rem 1rem;
+            padding: 22% 5rem 20rem 1rem;
+            text-align: center;
+            
+        }
+        .title h1{
+            font-size: 4.4rem;
+            font-weight: 400;
+            color: var(--fclr);
+            padding: 0.5rem;
+        }
+        .title .and{
+            font-size: 3.5rem;
+            font-weight: 300;
+        }
+        .title .brunch{
+            font-weight: 900;
+        }
+        .title p{
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--fclr);
+            padding: 0.5rem;
+        }
+
+        .wrap-2{
+            text-align: center;
+        }
+        .background-2{
+            background-image: url(2_img-2.png);
+            background-repeat: no-repeat;
+            background-size: 100% 304%;
+        }
+        .online{
+            padding: 2rem 0;
+        }
+        .online h2{
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 0.08rem;
+            line-height: 6rem;
+            color: #fff;
+        }
+        .online h2 span{
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: 0.08rem;
+        }
+        .order{
+            padding: 1rem 1rem 8rem 1rem;
+        }
+        .order_box{
+            display: flex;
+            margin: 7rem 6rem;
+            position: relative;
+            box-shadow: 0 0 5px rgb(177, 177, 177);
+            border: none;
+        }
+        .ord_box1 div{
+            color: var(--fclr);
+            font-size: 1.7rem;
+            font-weight: 500;
+            padding: 1rem 1rem 1rem 1rem;
+            position: absolute;
+            width: 4.5rem;
+            aspect-ratio: 1;
+            border-radius: 90%;
+            background-color: rgb(255, 255, 255);
+            z-index: 2;
+            transform: translate(175%, -96%);
+            box-shadow: 0 0 10px var(--fclr);
+        }
+
+        .ord_box1{
+            padding: 2rem 0 3rem 0;
+            flex: 0 1 33.3%;
+            background-color: var(--oclr);
+            height: 20rem;
+            
+        }
+        .ord_box1 h3{
+            font-size: 2rem;
+            font-weight: 500;
+            color: #fff;
+            padding: 1rem 0 2rem 0;
+        }
+        .ord_box1 p{
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 0.04rem;
+            line-height: 1.2rem;
+            color: #fff;
+            padding: 2rem;
+        }
+
+        .wrap-3{
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        .special h2{
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 0.08rem;
+            line-height: 6rem;
+        }
+        .special span{
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: 0.08rem;
+            line-height: 6rem;
+        }
+        .rate_box, .show.block{
+            margin: 1rem 0.1rem 0rem 0.1rem;
+            padding: 0.2rem;
+            display: flex;
+            flex-flow: wrap;
+        }
+        .rate_box1{
+            width: 32%;
+            height: auto;
+            margin: 2.6rem 0 0.6rem 0;
+            padding: 1.3rem 0.3rem 1.3rem 0.3rem;
+            flex-basis: 33.33%;
+            max-width: 33.33%;
+        }
+        .rate_box1 img{
+            width: 90%;
+            aspect-ratio: 1;
+             padding: 1rem 0;
+        }
+        .rate_box1 h3{
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.04rem;
+            padding: 0 1.5rem;
+            color: var(--fclr);
+            text-align: left;
+            line-height: 3rem;
+        }
+        .rate_box1 p{
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 0.04rem;
+            padding: 0 1.5rem;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-align: left;
+            white-space: nowrap;
+            width: 100%;
+        }
+        .rate_box1 .hr{
+            width: auto;
+            height: 0.5px;
+            border: 0.5px solid var(--fclr);
+            border-style: inset;
+            margin: 1rem 1.5rem 1rem 1rem;
+        }
+        .rate_box1 .price{
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--fclr);
+        }
+        .wrap-3 button{
+            background: var(--fclr);
+            border: none;
+            border-radius: 30px;
+            padding: 1rem 3.5rem;
+            color: #fff;
+            letter-spacing: 0.12rem;
+        }
+
+        .show{
+            display: none;
+        }
+        .show.block{
+            display: block;
+            display: flex;
+            flex-flow: wrap;
+        }
+
+        .wrap-4{
+            margin: 1rem;
+            padding: 2rem 1rem 1rem 1rem;
+            text-align: left;
+        }
+        .brunch_img{
+            background-image: url(4_img.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .brunch{
+            padding: 1rem 0.5rem 14rem 2rem;
+        }
+        .brunch h2{
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 0.03rem;
+            line-height: 2rem;
+            color: var(--fclr);
+            margin-top: 1rem;
+        }
+        .brunch span{
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: 0.04rem;
+            line-height: 3.5rem;
+            color: var(--fclr);
+        }
+        .brunch p{
+            font-size: 1.3rem;
+            font-weight: 500;
+            letter-spacing: 0.02rem;
+            line-height: 1.6rem;
+            color: var(--fclr);
+            width: 26rem;
+            padding: 2rem 0 5rem 0;
+        }
+        .wrap-4 button{
+            background: var(--oclr);
+            border: none;
+            border-radius: 30px;
+            padding: 1rem 3.5rem;
+            color: #fff;
+            letter-spacing: 0.12rem;
+        }
+        .show4{
+            display: none;
+        }
+        .show4.block{
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 500;
+            letter-spacing: 0.02rem;
+            line-height: 1.6rem;
+            color: var(--fclr);
+            width: 26rem;
+            padding: 2rem 0 5rem 0;
+        }
+
+        .wrap-5{
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        .vegan h2{
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 0.08rem;
+            line-height: 6rem;
+        }
+        .vegan span{
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: 0.08rem;
+            line-height: 6rem;
+        }
+         .rate_box, .show5.block{
+            margin: 1rem 0.1rem 0rem 0.1rem;
+            padding: 0.2rem;
+            display: flex;
+            flex-flow: wrap;
+        }
+        .rate_box1{
+            width: 32%;
+            height: auto;
+            margin: 2.6rem 0rem 0.6rem 0rem;
+            padding: 1.3rem 0.3rem 1.3rem 0.3rem;
+            flex-basis: 33.33%;
+            max-width: 33.33%;
+        }
+        .rate_box1 img{
+            width: 90%;
+            aspect-ratio: 1;
+            padding: 1rem 0;
+        }
+        .rate_box1 h3{
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.04rem;
+            padding: 0 1.5rem;
+            color: var(--fclr);
+            text-align: left;
+            line-height: 2rem;
+        }
+        .rate_box1 p{
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 0.04rem;
+            padding: 0 1.5rem;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-align: left;
+            white-space: nowrap;
+            width: 100%;
+        }
+        .rate_box1 .hr{
+            width: auto;
+            height: 0.5px;
+            border: 0.5px solid var(--fclr);
+            border-style: inset;
+            margin: 1rem 1.5rem 1rem 1rem;
+        }
+        .rate_box1 .price{
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--fclr);
+        }
+        .wrap-5 button{
+            background: var(--gclr);
+            border: none;
+            border-radius: 30px;
+            padding: 1rem 3.5rem;
+            color: #fff;
+            letter-spacing: 0.12rem;
+        }
+        .show5{
+            display: none;
+        }
+        .show5.block{
+            display: block;
+            display: flex;
+            flex-flow: wrap;
+            flex-basis: 100%;
+            max-width: 100%;
+           
+        }
+
+
+        .background-3{
+            background-image: url(2_img-6-1.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        
+        .wrap-6{
+            margin: 1rem;
+            padding: 8rem 2rem 1rem 62%;
+            text-align: left;
+        }
+        .promo{
+            margin: 1rem 1rem 1rem 1rem;
+        }
+        .promo h2{
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 3rem;
+        }
+        .promo span{
+            font-size: 2.5rem;
+            font-weight: 300;
+            line-height: 1.5rem;
+        }
+        .wrap-6 button{
+            background: var(--gclr);
+            border: none;
+            border-radius: 30px;
+            padding: 1rem 3.5rem;
+            color: #fff;
+        }
+        .show6{
+            display: none;
+        }
+        .show6.block{
+            display: block;
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.3rem;
+            color: #fff;
+            padding: 0.5rem 0.5rem 0.5rem 0 ;
+            width: 18rem;
+            letter-spacing: 0.04rem;
+        }
+
+        .wrap-7{
+            padding: 33rem 1rem 1rem 4rem;
+            text-align: left;
+        }
+        .about{
+            padding: 1rem;
+        }
+        .about h2{
+            font-size: 2.8rem;
+            font-weight: 300;
+            line-height: 3.5rem;
+            padding: 2rem 0;
+            color: var(--fclr);
+        }
+        .about span{
+            font-size: 2.8rem;
+            font-weight: 500;
+            line-height: 3rem;
+            color: var(--fclr);
+        }
+        .about p{
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: 1.6rem;
+            color: var(--fclr);
+            padding: 3rem 0 1rem 0 ;
+            width: 28rem;
+            letter-spacing: 0.04rem;
+        }
+        .show7{
+            display: none;
+        }
+        .show7.block{
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: 1.6rem;
+            color: var(--fclr);
+            padding: 0 ;
+            width: 28rem;
+            letter-spacing: 0.04rem;
+        }
+
+        .wrap-7 button{
+            background: var(--oclr);
+            border: none;
+            border-radius: 30px;
+            padding: 1rem 3.5rem;
+            color: #fff;
+            letter-spacing: 0.12rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .wrap-8-s{
+            background-image: url(2_img-8.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            text-align: center;
+            padding: 15% 10rem 0;
+            color: var(--fclr);
+        }
+        .summary{
+            padding-top: 1%;
+        }
+        .summary q{
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 2rem;
+            letter-spacing: 0.03rem;
+            padding: 1rem;
+        }
+        .summary p{
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: 0.03rem;
+            padding: 3rem 1rem;
+        }
+
+        .social{
+            display: flex;
+            place-content: center;
+        }
+        .social ul{
+            display: flex;
+            align-items: center;
+        }
+        .social li{
+            padding: 10px;
+        }
+
+        .about_us{
+            display: flex;
+            color: #fff;
+            padding-top: 15%;
+        }
+        .about1{
+            padding: 1rem 6rem 1rem 1rem;
+            flex: 1 1 60%;
+        }
+        footer h3{
+            line-height: 5rem;
+        }
+        .about2, .about3, .about4{
+            padding: 1rem;
+            flex: 1 1 10%;
+        }
+
+
+        @media screen and (max-width:1200px) {
+            html{font-size: 15px;}
+        }
+        @media screen and (max-width:980px) {
+            html{font-size: 14px;}
+            header{
+                top: -2%;
+                left: 1%;
+            }
+            .title{
+                padding-bottom: 15rem;
+            }
+            .order_box{
+                align-items: center;
+            }
+            .ord_box1 div{
+                transform: translate(120%, -96%);
+            }
+
+            .brunch p, .show4.block{
+                font-size: 1.1rem;
+                line-height: 1.5rem;
+                padding: 2rem 0 3rem 0;
+                width: 50%;
+            }
+
+            .wrap-6{
+                padding: 4rem 2rem 1rem 62%;
+            }
+            .promo{
+                margin: 1rem 0rem 1rem 0rem;
+            }
+
+            .wrap-7{
+               padding: 30rem 1rem 1rem 4rem;
+            }
+
+            .wrap-8-s{
+                padding: 27% 4rem 0;
+            }
+            .summary p{
+                padding: 2rem 1rem;
+            }
+            .social{
+                padding: 1rem 1rem 3rem;
+            }
+            
+        }
+        @media screen and (max-width:768px) {
+            html{font-size: 12px;}
+            header{
+                top: 8%;
+                left: 4%;
+                width: 96%;
+            }
+            .heading{
+                padding: 0;
+            }
+            .logo img{
+                width: 8rem;
+            }
+
+        .collapse{ display: none;}
+
+        .chk{ display: block;}
+
+            .collapse{ 
+                position: absolute; 
+                left: 13px; 
+                right: 12px; 
+                top: 135px; 
+                background: var(--fclr);
+            }
+            .collapse ul, .collapse .flex{ 
+                flex-flow: column wrap;
+            } 
+            nav{ 
+                width: 100%; 
+                text-align: right;
+            }
+            .collapse a{ line-height: 40px;}
+            .menu{
+                margin: 1.5rem 5rem 1rem 1rem;
+            }
+            .menu a{
+            padding: 1rem;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+            .title{
+                padding: 18% 5rem 26% 1rem;
+            }
+            .title h1{
+                font-size: 3rem;
+                padding: 0rem 0.5rem 0rem 4rem;
+                margin-top: 4%;
+            }
+            .title .and{
+                font-size: 3.5rem;
+            }
+            .title .brunch{
+                padding: 0 0 0.5rem 0.5rem;
+            }
+            .title p{
+                font-size: 1.2rem;
+                padding: 0 0.5rem 1rem 7rem;
+            }
+            .order_box{
+                flex-flow: column;
+                align-items: center;
+                padding: 1rem;
+                margin: 1rem;
+                box-shadow: none;
+            }
+            .ord_box1{
+                padding: 2rem 1rem 4rem 1rem;
+                margin: 1.5rem;
+                width: 24rem;
+                box-shadow: 0 0 5px rgb(177, 177, 177);
+            }
+            .ord_box1 div{
+                transform: translate(195%, -91%);
+            }
+
+            .wrap-4{
+                margin: 0;
+                padding: 0;
+            }
+            .brunch{
+                padding: 1rem 0 15.5rem 0.5rem;
+            }
+            .brunch p, .show4.block{
+                padding: 1rem 0 1rem 0;
+            }
+            .wrap-4 button{
+                padding: 0.8rem 2rem;
+            }
+
+            .wrap-6{
+                padding-left: 55%;
+                padding-top: 7%;
+            }
+            .promo{
+                margin: 1rem 0 3px 15px;
+            }
+            .promo h2, .promo span{
+                line-height: 1.7rem;
+                font-size: 1.6rem;
+                width: 11rem;
+            }
+            .wrap-6 button{
+                font-size: 0.85rem;
+                padding: 5% 14%;
+                margin: 0 0 0 2rem;
+            }
+            .show6.block{
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 1.1rem;
+                width: 14rem;
+            }
+
+            .wrap-7{
+                padding: 48% 1rem 4rem 1rem;
+            }
+            .about h2{
+                font-size: 2.2rem;
+                padding: 3rem 0 1rem;
+            }
+            .about span{
+                font-size: 2.2rem;
+            }
+            .about p{
+                font-size: 1.2rem;
+                font-weight: 400;
+                line-height: 1.4rem;
+                padding: 1rem 0 1rem 0;
+                width: 70%;
+            }
+            .wrap-7 button{
+                font-size: 1rem;
+                padding: 4% 5%;
+            }
+
+            .wrap-8-s{
+                padding: 22% 1rem 1rem;
+            }
+            .summary{
+                padding-top: 28%;
+            }
+            .summary q{
+                font-size: 1.3rem;
+                line-height: 0.6rem;
+                letter-spacing: 0;
+                padding: 0;
+            }
+            .summary p{
+                font-size: 1.8rem;
+                padding: 4rem 1rem;
+                letter-spacing: 0;
+            }
+
+            .about_us{
+                text-align: center;
+                flex-flow: wrap;
+            }
+            .social{
+            padding: 1rem 1rem 4rem;
+            }
+            .about_us{
+                padding-top: 49%;
+            }
+            .about1{
+                padding: 1rem;
+            }
+            .col-12{
+                flex: 1 0 auto;
+                flex-basis: 100%; 
+                max-width: 100%; 
+            }
+            .col-4{
+                flex: 1 0 auto;
+                flex-basis: 33.3%;
+                max-width: 33.3%;
+            }
+        }
+        @media screen and (max-width:600px) {
+            header{
+                top: 4%;
+                left: 2%;
+                width: 96%;
+            }
+        }
+        @media screen and (max-width:460px){
+            html{
+                font-size: 12px;
+            }
+            header{
+                top: -2%;
+                left: -3%;
+                width: 93%;
+            }
+            .container{
+                margin: 0rem;
+            }
+            .heading{
+                padding: 0;
+            }
+            .logo{
+                flex: 1 1 50%;
+                margin: 2rem 2rem 1rem 0rem;
+                padding: 1rem 0rem 0rem 0rem;
+            }
+            .logo img{
+                padding: 1rem 0.5rem 1rem 2.5rem;
+            }
+            .menu{
+                flex: 1 1 50%;
+            margin: 3.5rem 0 0 0;
+            }
+            .chk{
+                width: 3rem;
+            }
+
+            .ord_box1 div{
+                transform: translate(127%, -91%);
+            }
+
+            .rate_box1{
+                flex-basis: 100%;
+                max-width: 100%;
+                flex: 1 0 100%;
+            }
+
+                .title{
+                    margin: 0;
+                    padding: 1rem 0rem 7rem 0rem;
+                }
+            .title h1{
+                font-size: 1.5rem;
+                line-height: 1.9rem;
+                padding: 18% 0rem 0rem 0rem;
+            }
+            .title .and{
+                font-size: 1.8rem;
+            }
+            .title .brunch{
+                padding: 1rem 3rem 0 0;
+            }
+            .title p{
+                font-size: 0.9rem;
+                padding: 0.5rem 0.5rem 0rem 1rem;
+            }
+
+            .rate_box{
+                flex-flow: column;
+                align-items: center;
+            }
+            .rate_box1{
+                width: 105%;
+                margin: 0.3rem;
+            }
+
+            .wrap-4{
+                padding: 0;
+            }
+            .wrap-4 .container{
+                padding: 0 0.5rem;
+            }
+            .brunch{
+                padding: 1rem 3rem 15rem 0;
+            }
+            .brunch p, .show4.block{
+                padding: 1rem 0 0.5rem 0;
+            }
+            .wrap-4 button{
+                font-size: 0.9rem;
+                padding: 3% 5%;
+            }
+
+            .wrap-6{
+                padding-left: 54%;
+                padding-top: 19px;
+            }
+            .promo{
+                margin: 0 0 5px 0;
+            }
+            .promo h2{
+                font-size: 16px;
+                line-height: 1.6rem;
+                width: 10rem;
+            }
+            .promo span{
+                font-size: 16px;
+                line-height: 1.6rem;
+            }
+            .wrap-6 button{
+                font-size: 0.71rem;
+                padding: 6% 7%;
+            }
+
+            .wrap-7{
+                padding: 48% 0 1rem 0;
+            }
+            .about h2{
+                font-size: 2rem;
+                padding: 0;
+                line-height: 1.5rem;
+            }
+            .about span{
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+            .about p{
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.2rem;
+                padding: 1rem 0 1rem 0;
+                width: 59%;
+            }
+            .wrap-7 a{
+                font-size: 0.8rem;
+                padding: 4% 5%;
+            }
+           
+            .wrap-8-s{
+                padding: 20% 5px 1rem;
+            }
+            .summary{
+                padding-top: 54%;
+            }
+            .summary q{
+                font-size: 1rem;
+                font-weight: 500;
+                letter-spacing: 0;
+                padding: 1rem;
+            }
+            .summary p{
+                font-size: 1.4rem;
+                padding: 0;
+                padding-top: 2.4rem;
+            }
+            .social{
+                padding: 1rem 1rem 3rem;
+            }
+            .about_us{
+                padding-top: 135%;
+                font-size: 1rem;
+            }
+            
+
+        }
+
+        /* --------------- SCROLL ANIMATION -------------- */
+
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all 1s ease-in-out; }
+    .slide-in-left { opacity: 0; transform: translateX(-50px); transition: all 1s ease-in-out; }
+    .slide-in-right { opacity: 0; transform: translateX(50px); transition: all 1s ease-in-out; }
+    .zoom-in { opacity: 0; transform: scale(0.8); transition: all 0.6s ease-in-out; }
+    .rotate-in { opacity: 0; transform: rotate(-90deg); transition: all 0.6s ease-in-out; }
+    /* .bounce-in { opacity: 0; transform: translateY(100px); transition: all 1.2s ease-in-out; } */
+    .bounce-in.animate {
+        animation: bounce 2.5s ease-in-out;
+    }
+    
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        25% {
+            transform: translateY(-20px);
+        }
+        75% {
+            transform: translateY(20px);
+        }
+    }
+
+    .fade-in.animate, .slide-in-left.animate, .slide-in-right.animate,
+    .zoom-in.animate, .rotate-in.animate  {
+      opacity: 1;
+      transform: none;
+    }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="heading">
+                <div class="logo">
+                    <a href=".wrap-1"><img src="2_logo.png" alt="logo"></a>
+                </div>
+                <div class="menu">
+                    <div class="chk">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="collapse">    
+                        <nav>
+                            <ul>
+                             <li><a href="#wrap-1">Home</a></li>
+                                <li><a href=".menu">Menu</a></li>
+                                <li><a href="#promo">Promo</a></li>
+                                <li><a href="#order">Order</a></li>
+                                <li><a href="#about_us">Order</a></li>
+                         </ul>
+                        </nav>
+                 </div>
+                </div>
+            </div>
+    </header>
+
+    <div class="wrap-1" id="wrap-1">
+        <div class="container">
+                <div class="main">
+                    <div class="title bounce-in scroll-animation">
+                        <h1>Healthy <span class="and"> & </span> Fresh <br> 
+                            <span class="brunch">Brunch</span>
+                        </h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, <br>
+                        adipisicing elit.
+                        </p>
+                    </div>
+                </div>
+            </div> 
+        </div>   
+    </div>
+    
+    <div class="wrap-2">
+        <div class="container">
+            <div class="background-2">
+            <section class="online">
+                <h2>HOW TO <span>ORDER ONLINE</span></h2>
+            </section>
+            <div class="order">
+                <div class="order_box fade-in scroll-animation">
+                    <section class="ord_box1">
+                        <div>01</div>
+                        <h3>Order</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur
+                             elit. Voluptatum natus
+                               beatae at unde vel, eius vel, eius at unde vel, eius
+                            .</p>
+                    </section>
+                    <section class="ord_box1">
+                        <div>02</div>
+                        <h3>Choose Menu</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur
+                             elit. Voluptatum natus
+                              architecto beatae at unde vel, eius at unde vel, eius
+                            .</p>
+                    </section>
+                    <section class="ord_box1">
+                        <div>03</div>
+                        <h3>Delivery</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur
+                             elit. Voluptatum natus
+                             beatae at unde vel, eius at unde vel, eius
+                            .</p>
+                    </section>
+                </div>
+            </div>
+        </div> 
+        </div>
+    </div>
+
+    <div class="wrap-3" id="menu">
+        <div class="container">
+            <div class="special">
+                <h2>SPECIAL <span>MENU</span></h2>
+            </div>
+            <div class="rate_box fade-in scroll-animation">
+                <div class="rate_box1">
+                    <img src="s_img-1.png" alt="img1">
+                    <h3>Salad</h3>
+                    <p>Lorem ipsum dolor sit amet  ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $15,00
+                    </p>
+                </div>
+                <div class="rate_box1">
+                    <img src="s_img-2.png" alt="img2">
+                    <h3>Sandwich</h3>
+                    <p>Lorem ipsum dolor sit amet   
+                        ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $20,00
+                    </p>
+                </div>
+                <div class="rate_box1">
+                    <img src="s_img-3.png" alt="img3">
+                    <h3>Eggs</h3>
+                    <p>Lorem ipsum dolor sit amet   
+                        ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $10,00
+                    </p>
+                </div>
+            </div>
+
+            <div class="show bounce-in scroll-animation">
+                <div class="rate_box1">
+                    <img src="s_img-1.png" alt="img1">
+                    <h3>Salad</h3>
+                    <p>Lorem ipsum dolor sit amet  ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $15,00
+                    </p>
+                </div>
+                <div class="rate_box1">
+                    <img src="s_img-2.png" alt="img2">
+                    <h3>Sandwich</h3>
+                    <p>Lorem ipsum dolor sit amet   
+                        ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $20,00
+                    </p>
+                </div>
+                <div class="rate_box1">
+                    <img src="s_img-3.png" alt="img3">
+                    <h3>Eggs</h3>
+                    <p>Lorem ipsum dolor sit amet   
+                        ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $10,00
+                    </p>
+                </div>
+                <div class="rate_box1">
+                    <img src="s_img-1.png" alt="img1">
+                    <h3>Salad</h3>
+                    <p>Lorem ipsum dolor sit amet  ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $15,00
+                    </p>
+                </div>
+                <div class="rate_box1">
+                    <img src="s_img-2.png" alt="img2">
+                    <h3>Sandwich</h3>
+                    <p>Lorem ipsum dolor sit amet   
+                        ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $20,00
+                    </p>
+                </div>
+                <div class="rate_box1">
+                    <img src="s_img-3.png" alt="img3">
+                    <h3>Eggs</h3>
+                    <p>Lorem ipsum dolor sit amet   
+                        ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $10,00
+                    </p>
+                </div>
+            </div>
+
+            <button class="btn3">SHOW MORE</button>
+        </div>
+    </div>
+
+    <div class="wrap-4">
+        <div class="container">
+            <div class="brunch_img">
+                <div class="brunch fade-in scroll-animation">
+                    <h2>We have <br>
+                        <span>special Brunch</span> <br>
+                        for everyone
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, 
+                        adipisicing elit. Sequi autem nostrum quam
+                        eius ea odio iusto voluptatum tenetur 
+                        ciis, quidem dignissimos a voluptatibus sint. 
+                        Similique at iure
+
+                         <span class="show4">
+                            Lorem ipsum, dolor sit amet consectetur 
+                            adipisicing elit. Ab, unde?
+                        </span>
+                    </p>
+                    
+
+                    <button class="btn4">READ MORE</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap-5">
+        <div class="container">
+            <div class="vegan">
+                <h2>VEGAN <span>BRUNCH</span></h2>
+            </div>
+            <div class="rate_box fade-in scroll-animation">
+                <div class="rate_box1">
+                    <img src="5_img-1.png" alt="img1">
+                    <h3>Hummus Salad</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur 
+                        ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $15,00
+                    </p>
+                </div>
+                <div class="rate_box1">
+                    <img src="5_img-2.png" alt="img2">
+                    <h3>Falafel</h3>
+                    <p>Lorem ipsum dolor sit amet  consectetur 
+                        ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $20,00
+                    </p>
+                </div>
+                <div class="rate_box1">
+                    <img src="5_img-3.png" alt="img3">
+                    <h3>Tomato Soup</h3>
+                    <p>Lorem ipsum dolor sit amet  consectetur 
+                        ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $10,00
+                    </p>
+                </div>
+
+            <span class="show5 bounce-in scroll-animation">
+                <div class="rate_box1">
+                    <img src="5_img-1.png" alt="img1">
+                    <h3>Hummus Salad</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur 
+                        ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $15,00
+                    </p>
+                </div>
+                <div class="rate_box1">
+                    <img src="5_img-2.png" alt="img2">
+                    <h3>Falafel</h3>
+                    <p>Lorem ipsum dolor sit amet  consectetur 
+                        ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $20,00
+                    </p>
+                </div>
+                <div class="rate_box1">
+                    <img src="5_img-3.png" alt="img3">
+                    <h3>Tomato Soup</h3>
+                    <p>Lorem ipsum dolor sit amet  consectetur 
+                        ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $10,00
+                    </p>
+                </div>
+                <div class="rate_box1">
+                    <img src="5_img-1.png" alt="img1">
+                    <h3>Hummus Salad</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur 
+                        ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $15,00
+                    </p>
+                </div>
+                <div class="rate_box1">
+                    <img src="5_img-2.png" alt="img2">
+                    <h3>Falafel</h3>
+                    <p>Lorem ipsum dolor sit amet  consectetur 
+                        ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $20,00
+                    </p>
+                </div>
+                <div class="rate_box1">
+                    <img src="5_img-3.png" alt="img3">
+                    <h3>Tomato Soup</h3>
+                    <p>Lorem ipsum dolor sit amet  consectetur 
+                        ad<br>ipisicing elit. Maiores numquam quae 
+                        exercitationem, nam omnis natus eum 
+                        placeat quos quaerat perspiciatis!
+                    </p>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <p class="price">
+                        $10,00
+                    </p>
+                </div>
+            </span>
+
+            </div>
+            <button class="btn5">SHOW MORE</button>
+        </div>
+    </div>
+
+    <div class="wrap-last">
+        <div class="container">
+            <div class="background-3">    
+                <div class="wrap-6 fade-in scroll-animation" id="promo">    
+                    <div class="promo">
+                        <h2>Spring Promo <br>
+                        25% <span>off <br> in all menus</span>
+                        </h2>
+
+                        <span class="show6">
+                            Lorem ipsum dolor sit, amet 
+                            consectetur adipisicing elit. Quae, iusto!
+                        </span>
+                    </div>
+                    <button class="btn_last">
+                        READ MORE
+                    </button>
+                </div>
+
+                <div class="wrap-7" id="order">
+                
+                    <div class="about">
+                        <h2>About <span>us <br>
+                        Come to visit us</span>
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Ducimus porro magni repellat. 
+                            Laudantium praesentium, reprehenderit fuga 
+                            officiis quod, nesciunt rem modi dignissimos 
+                            ipsam exercitationem repudiandae possimus 
+                            adipisci, saepe sequi perferendis.
+
+                            <div class="show7">
+                                Lorem ipsum dolor sit amet 
+                                consectetur adipisicing elit. Dolores, quidem.
+                            </div>
+                        </p>
+                    </div>
+                    <button class="btn7 slide-in-left scroll-animation">READ MORE</button>
+                
+                </div>
+        
+                
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrap-8">
+            <div class="container">
+                <div class="wrap-8-s">
+                    <div class="summary fade-in scroll-animation">
+                        <q>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Dolore, laboriosam. Error porro cupiditate ad quae 
+                            laborum at, assumenda ullam voluptatum ratione 
+                            animi. 
+                        </q>
+                        <p>Break & Brunch</p>
+                    </div>
+                    <div class="social bounce-in scroll-animation">
+                        <ul>
+                            <li><a href="facebook"><span class="fa-brands fa-facebook-f"></span></a></li>
+                            <li><a href="twitter"><span class="fa-brands fa-twitter"></span></a></li>
+                            <li><a href="instagram"><span class="fa-brands fa-square-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="about_us bounce-in scroll-animation" id="about_us">
+                        <div class="about1 col-12">
+                            <h3>ABOUT</h3>
+                            <P>Lorem ipsum dolor sit amet consectetur 
+                                adipisicing elit. Nobis, doloribus! 
+                                Lorem ipsum dolor sit amet. Lorem ipsum 
+                                dolor sit amet consectetur adipisicing elit. 
+                                Praesentium, est.
+                            </P>
+                        </div>
+                        <div class="about2 col-4">
+                            <h3>ABOUT</h3>
+                            <p>Team</p>
+                            <p>Join us</p>
+                            <p>Ethic</p>
+                            <p>Goals</p>
+                        </div>
+                        <div class="about3 col-4">
+                            <h3>ABOUT</h3>
+                            <p>Team</p>
+                            <p>Join us</p>
+                            <p>Ethic</p>
+                            <p>Goals</p>
+                        </div>
+                        <div class="about4 col-4">
+                            <h3>ABOUT</h3>
+                            <p>Team</p>
+                            <p>Join us</p>
+                            <p>Ethic</p>
+                            <p>Goals</p>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+            
+        </div>
+    </footer>
+
+
+   <script>
+
+    const menu = document.querySelector('.chk');
+    const nav = document.querySelector('nav');
+    const coll = document.querySelector('.collapse');
+
+
+    menu.addEventListener('click', () => {
+        menu.classList.toggle('active');
+
+        if (menu.classList.contains('active')){
+            coll.style.display = 'block';
+        }else{
+            coll.style.display = 'none';
+        }
+    });
+
+
+    // ------ show more button ------
+
+    const show = document.querySelector('.show');
+    const btn = document.querySelector('.btn3');
+
+    btn.addEventListener('click', () => {
+        show.classList.toggle('block');
+        // console.log(1);
+        if(show.classList.contains('block')){
+            btn.textContent = 'SHOW LESS';
+        }else{
+            btn.textContent = 'SHOW MORE';
+        }
+    });
+
+    // -------- read more button ---------
+
+
+    const read = document.querySelector('.show4');
+    const butn = document.querySelector('.btn4');
+
+    butn.addEventListener('click', () => {
+        read.classList.toggle('block');
+        // console.log(2);
+        if(read.classList.contains('block')){
+            butn.textContent = 'READ LESS';
+        }else{
+            butn.textContent = 'READ MORE';
+        }
+    });
+
+    // ------ show more button wrap-5 -------
+
+    const showM = document.querySelector('.show5');
+    const buton = document.querySelector('.btn5');
+
+    buton.addEventListener('click', () => {
+        showM.classList.toggle('block');
+        // console.log(2);
+        if(showM.classList.contains('block')){
+            buton.textContent = 'READ LESS';
+        }else{
+            buton.textContent = 'READ MORE';
+        }
+    });
+
+
+    // ------ read more button wrap-6 ------
+
+    const show6 = document.querySelector('.show6');
+    const btn6 = document.querySelector('.btn_last');
+
+    btn6.addEventListener('click', () => {
+        show6.classList.toggle('block');
+
+        if(show6.classList.contains('block')){
+            btn6.textContent = 'READ LESS';
+        }else{
+            btn6.textContent = 'READ MORE';
+        }
+    });
+
+    // ------- read more button wrap-7 -------
+
+    const show7 = document.querySelector('.show7');
+    const btn7 = document.querySelector('.btn7');
+
+    btn7.addEventListener('click', () => {
+        show7.classList.toggle('block');
+
+        if(show7.classList.contains('block')){
+            btn7.textContent = 'READ LESS';
+        }else{
+            btn7.textContent = 'READ MORE';
+        }
+    })
+
+    /* ----- ----- SCROLL ANIMATION ----- ----- */
+
+const elements = document.querySelectorAll('.scroll-animation');
+  
+  // Function to handle the scroll and toggle animations
+  const handleScroll = () => {
+    const viewportHeight = window.innerHeight;
+
+    elements.forEach((element) => {
+      const elementTop = element.offsetTop;
+      const elementBottom = elementTop + element.offsetHeight;
+      const scrollPosition = window.pageYOffset;
+
+      // Check if the element is in the viewport
+      if (scrollPosition + viewportHeight > elementTop && scrollPosition < elementBottom) {
+        element.classList.add('animate'); // Add 'animate' class to trigger the animation
+      } else {
+        element.classList.remove('animate'); // Remove 'animate' class when out of viewport
+      }
+    });
+  };
+
+  // Attach scroll event listener
+  window.addEventListener('scroll', handleScroll);
+
+  // Run once on page load to check initially visible elements
+  handleScroll();
+
+   </script>
+
+</body>
+</html>
